@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dockernodejs-deployment
+  labels:
+    role: dockernodejs
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      role: dockernodejs
+  template: 
+    metadata:
+        labels:
+            role: dockernodejs
+    spec:
+        containers:
+        - name: docker-nodejs
+          image: mprambadi/docker-nodejs
+          ports:
+            - containerPort: 3000
