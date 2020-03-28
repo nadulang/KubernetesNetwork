@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: dockernodejs-deployment
   labels:
-    role: dockernodejs
+    role: docker-nodejs
 spec:
   replicas: 2
   selector:
     matchLabels:
-      role: dockernodejs
+      role: docker-nodejs
   template: 
     metadata:
         labels:
-            role: dockernodejs
+            role: docker-nodejs
     spec:
         containers:
         - name: docker-nodejs

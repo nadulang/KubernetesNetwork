@@ -1,11 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: dockernodejs-service
+  name: hello-vue
 spec:
   type: ClusterIP
   ports:
-    - port: 80
-      targetPort: 3000
+    - protocol: TCP
+      port: 80
+      targetPort: http
   selector:
-    role: dockernodejs
+    role: hello-vue
