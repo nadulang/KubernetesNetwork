@@ -7,6 +7,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: http
   selector:
     role: hello-vue
